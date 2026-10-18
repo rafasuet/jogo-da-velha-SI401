@@ -1,0 +1,150 @@
+:root {
+    color-scheme: light;
+    font-family: Arial, sans-serif;
+    color: #183153;
+    background: #f1f5f9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    padding: 28px 16px;
+    text-align: center;
+    color: #fff;
+    background: #183153;
+}
+
+header h1,
+header p {
+    margin: 0;
+}
+
+header p {
+    margin-top: 8px;
+    color: #d7e3f4;
+}
+
+main {
+    width: min(100% - 32px, 440px);
+    margin: 32px auto;
+    padding: 24px;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 8px 24px #18315318;
+    text-align: center;
+}
+
+#playerForm {
+    display: grid;
+    gap: 14px;
+    text-align: left;
+}
+
+#playerForm h2 {
+    margin: 0 0 4px;
+    text-align: center;
+}
+
+.player-input {
+    display: grid;
+    gap: 6px;
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #b8c5d6;
+    border-radius: 6px;
+    font: inherit;
+}
+
+button {
+    font: inherit;
+}
+
+#playerForm button,
+#startButton {
+    padding: 10px 14px;
+    border: 0;
+    border-radius: 6px;
+    color: #fff;
+    background: #2457a7;
+    cursor: pointer;
+}
+
+#playerForm button:hover,
+#startButton:not(:disabled):hover {
+    background: #183f7d;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+#turnInfo {
+    margin: 22px 0 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    width: min(100%, 330px);
+    aspect-ratio: 1;
+    margin: 20px auto;
+}
+
+.cell {
+    display: grid;
+    place-items: center;
+    min-width: 0;
+    border: 2px solid #c5d2e2;
+    border-radius: 8px;
+    color: #183153;
+    background: #f8fafc;
+    font-size: clamp(2rem, 12vw, 3.5rem);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.cell:not(:disabled):hover {
+    background: #e8f0fc;
+}
+
+#message {
+    margin: 16px 0 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+footer {
+    margin-top: auto;
+    padding: 16px;
+    color: #52657e;
+    text-align: center;
+}
+
+@media (max-width: 420px) {
+    main {
+        padding: 18px;
+    }
+}

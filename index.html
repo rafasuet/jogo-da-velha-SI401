@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+        <title>Jogo da Velha | SI401</title>
+    </head>
+    <body>
+        <header>
+            <h1>Jogo da Velha</h1>
+            <p>Um desafio para dois jogadores</p>
+        </header>
+
+        <main>
+            <form id="playerForm">
+                <h2>Jogadores</h2>
+                <div class="player-input">
+                    <label for="playerX">Nome do Jogador X:</label>
+                    <input type="text" id="playerX" name="playerX" required>
+                </div>
+                <div class="player-input">
+                    <label for="playerO">Nome do Jogador O:</label>
+                    <input type="text" id="playerO" name="playerO" required>
+                </div>
+                <button type="submit">Salvar nomes e iniciar</button>
+            </form>
+
+            <p id="turnInfo" aria-live="polite" hidden>
+                Vez de: <span id="currentPlayer"></span>
+            </p>
+
+            <button id="startButton" type="button" disabled>Reiniciar partida</button>
+
+            <div id="gameBoard" hidden>
+                <button class="cell" type="button" data-index="0" aria-label="Casa 1" disabled></button>
+                <button class="cell" type="button" data-index="1" aria-label="Casa 2" disabled></button>
+                <button class="cell" type="button" data-index="2" aria-label="Casa 3" disabled></button>
+                <button class="cell" type="button" data-index="3" aria-label="Casa 4" disabled></button>
+                <button class="cell" type="button" data-index="4" aria-label="Casa 5" disabled></button>
+                <button class="cell" type="button" data-index="5" aria-label="Casa 6" disabled></button>
+                <button class="cell" type="button" data-index="6" aria-label="Casa 7" disabled></button>
+                <button class="cell" type="button" data-index="7" aria-label="Casa 8" disabled></button>
+                <button class="cell" type="button" data-index="8" aria-label="Casa 9" disabled></button>
+            </div>
+
+            <p id="message" role="status" aria-live="polite" hidden></p>
+        </main>
+
+        <footer>
+            Tarefa de Programação WEB
+        </footer>
+    </body>
+</html>
